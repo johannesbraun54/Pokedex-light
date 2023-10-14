@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FB6C6C;
+
+}
+
+#pokedex {
+padding: 20px;
+min-height: 50vh;
+background-color: #FB6C6C;
+color: white;
+display: flex;
+border-top-right-radius: 40px;
+border-top-left-radius: 40px;
+}   
+
+.info-container{
+    background-color: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-top: -40px;
+    padding-bottom: 30px;
+}
+
+.info-container img{
+    width: 150px;
+    margin-top: -130px;
+    margin-left: 48px;
+    
+}
+
+.dialog-bg{
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dialog {
+    border-radius: 24px;
+    width: 50vw;
+}
+
+#headline {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#headline:hover {
+    cursor: pointer;
+}
+
+.pokemonCard{
+   font-size: large;
+    padding: 32px;
+    width: auto;
+    background-color: rgb(240, 240, 240);
+    margin: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    flex-grow: 3;
+    text-align: center;
+}
+
+.pokemonCard img{
+    height: 160px;
+}
+
+.d-none{
+    display: none;
+}
+
+.z-index{
+    z-index: 999;
+}
+
+.pokeBody{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+#pokemonInfo{
+    height: 30vh;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+
+}
+
+/* Grundlegendes Styling für das Input-Feld */
+input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+input:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+.loadMoreBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 24px;
+}
+
+.loadMoreBtn button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #0070e8;;
+  }
+/* Für Webkit-basierte Browser */
+::-webkit-scrollbar {
+    width: 12px; /* Breite der Scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Farbe des Scrollbalken-Griffes */
+    border-radius: 6px; /* Abrundung des Scrollbalken-Griffes */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Farbe des Scrollbalken-Griffes bei Hover */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Farbe des Scrollbalken-Tracks */
+    border-radius: 10px; /* Abrundung des Scrollbalken-Tracks */
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: #ddd; /* Farbe des Scrollbalken-Tracks bei Hover */
+}
+
+::-webkit-scrollbar-button {
+    display: none; /* Verstecke die Scrollbar-Pfeile (optional) */
+}
+
+
+
+
+
+@media(max-width: 500px){
+    .pokemonCard img{
+        height: 100px;
+    }
+
+    #pokemonName{
+        font-size: large;
+    }
+
+    .info-container img {
+        width: 120px;
+    }
+
+    .dialog{
+        width: 75vw;
+    }
+
+}
+
