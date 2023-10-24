@@ -1,3 +1,7 @@
+/**
+ * generates a chart
+ */
+
 function chartStatements(){
     const ctx = document.getElementById('myChart');
 

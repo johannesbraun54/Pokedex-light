@@ -1,3 +1,7 @@
+/**
+ * it fetches the url from the pokeapi and renders the individually pokemons 
+ */
+
 async function loadTemplate(){
     
     

@@ -1,7 +1,7 @@
 #!/bin/bash
 git pull
 git add . 
-git commit -m "$*"
+git commit -atry "$*"
 git push
 
 

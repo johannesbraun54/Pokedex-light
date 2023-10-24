@@ -10,7 +10,9 @@ let currentPokemon;
 
 
 let isLoading = false
-
+/**
+ * renders a list ob pokemons
+ */
 async function loadAllPokemons(){
 
     if(!isLoading){
@@ -20,7 +22,9 @@ async function loadAllPokemons(){
      
     }
 }
-
+/**
+ * loads onclick at a button next twenty pokemons
+ */
 async function loadMore(){
     if(!isLoading){
         isLoading = true
@@ -30,6 +34,10 @@ async function loadMore(){
     }
 }
 
+/**
+ * renders a choosed pokemon into a dialog window
+ * @param {integer} i 
+ */
 
 async function loadPokemon(i){
     
@@ -42,7 +50,9 @@ async function loadPokemon(i){
         document.getElementById('pokemonInfoCard').classList.add('z-index')
 }
 
-
+/**
+ * renders the default info of the pokemon
+ */
 function renderPokemonInfo(){
     let getPokemonInfo =  document.getElementById('pokemonInfo')
 
@@ -56,7 +66,9 @@ function renderPokemonInfo(){
                                 <ul><li><b>Base Experience:</b> ${currentPokemon['base_experience']}</li></ul>`
 
 }
-
+/**
+ * loads the moves from the current pokemon
+ */
 function renderPokemonMoves(){
 
     let getPokemonInfo =  document.getElementById('pokemonInfo')
@@ -70,7 +82,9 @@ function renderPokemonMoves(){
             getPokemonInfo.innerHTML += `<ul><li>${move}</li></ul>`
         }
 }
-
+/**
+ * renders a chart with the info from the base stats into a chart
+ */
 function renderBaseStats(){
     let getPokemonInfo =  document.getElementById('pokemonInfo')
     let stats = currentPokemon['stats']
@@ -89,15 +103,24 @@ function renderBaseStats(){
     }
 }
 
-
+/**
+ * renders the chart to show the base stats an their value
+ * @param {array} baseStatName 
+ * @param {integer} baseStatValue 
+ */
 function renderChart(baseStatName,baseStatValue){
     chartStatements(baseStatName,baseStatValue)
 }
-
+/**
+ * closes the dialog window from the current pokemon
+ */
 function removeInfo(){
     document.getElementById('pokemonInfoCard').classList.add('d-none');
 }
-
+/**
+ * This function stopps the click-event at the dialog-window
+ * @param {PointerEvent} event 
+ */
 function doNotClose(event){
     event.stopPropagation();
 }
